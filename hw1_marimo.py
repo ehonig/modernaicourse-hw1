@@ -83,7 +83,7 @@ def _():
 @app.cell(hide_code=True)
 def _():
     mo.md(r"""
-    ### Problem 1: ``Classical'' programming for digit classification
+    ### Problem 1: "Classical" programming for digit classification
 
     This course deals primarily with machine learning approaches, but it's worth emphasizing that you _can_ try to approach many of the problems you'll want to solve with machine learning with traditional programming approaches as well.  In this problem, you should experiment with developing a "manual" classifier between images of digits in the MNIST dataset, which will be the first machine learning mode you'll develop during the later assignments.  Specifically, you'll want to implement the following function `classify_zero_one` to classify between images of zeros and ones in the MNIST dataset.  Try to think intuitively about features that might distinguish between zeros and ones, and if possible, try not to look at any statistics from the actual dataset (i.e., average values of the images, or anything like that).
 
@@ -143,7 +143,7 @@ def _():
     mo.md(r"""
     ### Problem 2: Vector Addition
 
-    In the remainder of this assignment, you're going to implement a wide variety of simple linear algebra operators, _without_ using any of the build-in tensor addition or matrix multiplication operators.  Your code should also throw assertion errors if any of the sizes do not match was it allowed for the given operation (i.e., you should be calling assert() to check that the sizes are correct).  Instead, you should use explicit for loops and element-by-element assignment/operations to implement your function.  You can also create new vectors of the right size as your return variable, etc.
+    In the remainder of this assignment, you're going to implement a wide variety of simple linear algebra operators, _without_ using any of the build-in tensor addition or matrix multiplication operators.  Your code should also throw assertion errors if any of the sizes do not match was it allowed for the given operation (i.e., you should be calling `assert()` to check that the sizes are correct).  Instead, you should use explicit for loops and element-by-element assignment/operations to implement your function.  You can also create new vectors of the right size as your return variable, etc.
 
     First implement a simple vector addition function that adds two vectors together, $x,y \in \mathbb{R}^n$.  Note that it is ok if this only works when provided with vectors, i.e., 1D tensors.
     """)
@@ -249,7 +249,7 @@ def _():
     mo.md(r"""
     ### Problem 4: Matrix-vector product approach #1
 
-    Write a routine that function that computes the matrix-vector product $Ax$ for $A \in \mathbb{R}^{m \times n}$ and $x \in \mathbb{R}^n$.  This version should compute each entry of the resuting vector using the inner product between rows of $A$ and the vector $x$, i.e., shown graphically this would be
+    Write a routine that computes the matrix-vector product $Ax$ for $A \in \mathbb{R}^{m \times n}$ and $x \in \mathbb{R}^n$.  This version should compute each entry of the resuting vector using the inner product between rows of $A$ and the vector $x$, i.e., shown graphically this would be
 
     $$
     Ax = \left [ \begin{array}{ccc}
@@ -313,7 +313,7 @@ def _():
     mo.md(r"""
     ### Problem 5: Matrix-vector product approach #2
 
-    Write a routine that function that computes the matrix-vector product $Ax$ for $A \in \mathbb{R}^{m \times n}$ and $x \in \mathbb{R}^n$.  This version should compute the result as a linear combination of the columns of $A$ with coefficients given by the entries of $x_i$, i.e., shows graphically this would be
+    Write a routine that computes the matrix-vector product $Ax$ for $A \in \mathbb{R}^{m \times n}$ and $x \in \mathbb{R}^n$.  This version should compute the result as a linear combination of the columns of $A$ with coefficients given by the entries of $x_i$, i.e., shows graphically this would be
 
     $$
     Ax = \left [ \begin{array}{cccc} \mid & \mid & & \mid \\
@@ -379,7 +379,7 @@ def _():
     mo.md(r"""
     ### Problem 6: Vector-matrix product approach #2
 
-    Write a routine that function that computes the vector-Matrix product $x^TA$ for $A \in \mathbb{R}^{m \times n}$ and $x \in \mathbb{R}^m$.  In keeping with PyTorch convention (i.e., not differentiating between column and row vectors), this should return a 1D tensor representing the resulting row vector.
+    Write a routine that computes the vector-Matrix product $x^TA$ for $A \in \mathbb{R}^{m \times n}$ and $x \in \mathbb{R}^m$.  In keeping with PyTorch convention (i.e., not differentiating between column and row vectors), this should return a 1D tensor representing the resulting row vector.
 
     This version should compute the result as a linear combination of the rows of $A$ with coefficients given by the entries of $x_i$, i.e., shows graphically this would be
 
@@ -722,7 +722,7 @@ def _():
     mo.md(r"""
     ### Problem 11: Block matrix multiplication
 
-    In this last question, you'll implement a "blocked" form of matrix multiplication.  Although we defined matrix multiplication in terms of the individual scalar entries of a matrix, it can also be defined by operating on subblocks of the matrices.  Specifically for an matrix $A \in \mathbb{R}^{4m \times 4n}$ we can define $A_{ij} \in \mathbb{R}^{4 \times 4}$ to be a _subblock_ of the matrix, and similarly for the matrix $B \in \mathbb{R}^{4n \times 4p}.  Then the corresponding $4 \times 4$ subblock of the matrix product $AB$ can be computed as
+    In this last question, you'll implement a "blocked" form of matrix multiplication.  Although we defined matrix multiplication in terms of the individual scalar entries of a matrix, it can also be defined by operating on subblocks of the matrices.  Specifically for an matrix $A \in \mathbb{R}^{4m \times 4n}$ we can define $A_{ij} \in \mathbb{R}^{4 \times 4}$ to be a _subblock_ of the matrix, and similarly for the matrix $B \in \mathbb{R}^{4n \times 4p}$.  Then the corresponding $4 \times 4$ subblock of the matrix product $AB$ can be computed as
     $$ (AB)_ij = \sum_{k=1}^n A_{ik} B_{kj} $$
     analogous to the usual definition of matrix multiplication, but with $A_{ik} B_{kj}$ now being a matrix product.
 
